@@ -23,6 +23,7 @@ namespace MTPL.UserPages
             InitializeComponent();
             db = new MTPLEntities();
             LoadCategories();
+            LoadBrands();
         }
 
         private void LoadCategories()
@@ -31,6 +32,14 @@ namespace MTPL.UserPages
             CategoryBox.ItemsSource = categories;
             CategoryBox.DisplayMemberPath = "category_name";
             CategoryBox.SelectedValuePath = "category_id";
+        }
+
+        private void LoadBrands()
+        {
+            var brands = db.car_brands.ToList();
+            BrandCar.ItemsSource = brands;
+            BrandCar.DisplayMemberPath = "brand_name";
+            BrandCar.SelectedValuePath = "brand_id";
         }
 
         private void BtnDone_Click(object sender, RoutedEventArgs e)
@@ -88,24 +97,9 @@ namespace MTPL.UserPages
                     return;
                 }
 
-                var existingBrand = db.car_brands.FirstOrDefault(b => b.brand_name == BrandCar.Text);
+                
 
-                int brandId;
-
-                if (existingBrand == null)
-                {
-                    var newBrand = new car_brands
-                    {
-                        brand_name = BrandCar.Text
-                    };
-                    db.car_brands.Add(newBrand);
-                    db.SaveChanges();
-                    brandId = newBrand.brand_id;
-                }
-                else
-                {
-                    brandId = existingBrand.brand_id;
-                }
+                int brandId = (int)BrandCar.SelectedValue;
 
                 var newCar = new car
                 {
@@ -122,7 +116,9 @@ namespace MTPL.UserPages
                 db.cars.Add(newCar);
                 db.SaveChanges();
 
-                MessageBox.Show("Автомобиль успешно добавлен!");
+                MessageBox.Show("Заявка успешно отправлена! Статус заявки вы можете увидеть на главном экране (проверить статус");
+                
+                // Переход на проверку статуса
             }
             catch(SqlException ex)
             {
