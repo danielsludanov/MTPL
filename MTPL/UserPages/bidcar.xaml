@@ -21,25 +21,25 @@
                 <TextBox x:Name="BrandCar" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Категория автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
-                <ComboBox Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
+                <ComboBox x:Name="CategoryBox" Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
 
 
                 <Label Content="Модель автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="ModelCar" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Год производства" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="YearManifacture" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Регистрационный номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="RegNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="СТС номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="STSNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="ПТС номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="PTSnumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
-                <Button Content="Далее" Style="{StaticResource Buttons}"/>
+                <Button x:Name="BtnDone" Content="Оформить" Click="BtnDone_Click" Style="{StaticResource Buttons}"/>
 
 
 
