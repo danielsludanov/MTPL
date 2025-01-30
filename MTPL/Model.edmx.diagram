@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd5bc593f6fd445f8444bd2671e2d6a0" Name="Diagram1">
+        <EntityTypeShape EntityType="MTPLModel.car_brands" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.car_categories" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.car" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.driver" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.policy" Width="1.5" PointX="9.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.region" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.role" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTPLModel.user" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="MTPLModel.FK__cars__brand_id__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__cars__category_i__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__cars__driver_id__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__policies__car_id__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__drivers__region___47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__drivers__user_id__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__policies__driver__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="MTPLModel.FK__users__role_id__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

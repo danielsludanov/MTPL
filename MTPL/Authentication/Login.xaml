@@ -1,0 +1,30 @@
+﻿<Window x:Class="MTPL.Authentication.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTPL.Authentication"
+        mc:Ignorable="d"
+        Title="АвтоПолис - удобное оформление ОСАГО за пару минут" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+
+        <StackPanel Orientation="Vertical" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="../References/AppIcons/Images/Logo.png" Width="80"/>
+            <Label Name="Header" Content="Авторизация" HorizontalAlignment="Center" FontSize="22" Margin="0 10 0 10" Style="{StaticResource Labels}"/>
+
+            <Label Name="ULogin" Content="Логин" Style="{StaticResource Labels}" FontWeight="SemiBold" Margin="0 0 0 5"/>
+            <TextBox x:Name="UserLogin" Style="{StaticResource TextBoxes}" Margin="0 0 0 10"/>
+
+            <Label Name="UPassword" Content="Пароль" Style="{StaticResource Labels}" FontWeight="SemiBold" Margin="0 0 0 5"/>
+            <PasswordBox x:Name="UserPassword" Style="{StaticResource PasswordBoxes}" Margin="0 0 0 15"/>
+
+            <Button x:Name="BtnLogin" Content="Войти" Click="BtnLogin_Click" Style="{StaticResource Buttons}" Margin="0 0 0 10"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlocks}">
+                <Run Text="Нет аккаунта?"/>
+                <Hyperlink x:Name="NavToReg" Click="NavToReg_Click" Style="{StaticResource HyperLinks}">Зарегистрироваться</Hyperlink>
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Window>
