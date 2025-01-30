@@ -21,34 +21,31 @@
                 <TextBox x:Name="FullName" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Дата рождения" Style="{StaticResource Labels}" FontSize="14"/>
-                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+                <DatePicker x:Name="DateBirth" Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
 
                 <Label Content="Регион проживания" Style="{StaticResource Labels}" FontSize="14"/>
-                <ComboBox Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
+                <ComboBox x:Name="RegionBox" Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
 
                 <Label Content="Серия водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="SerialDriverNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Номер водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="NumberDriver" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Срок окончания водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
-                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+                <DatePicker x:Name="InspireDateLicense" Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
 
                 <Label Content="Серия паспорта" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="SerialPassport" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Номер паспорта" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="NumberPassport"  Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
 
                 <Label Content="Срок окончания паспорта" Style="{StaticResource Labels}" FontSize="14"/>
-                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+                <DatePicker x:Name="InspireDatePassport" Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
 
-                <Button Content="Оформить" Style="{StaticResource Buttons}"/>
-
-
-
-
+                <Button x:Name="BtnNext" Click="BtnNext_Click" Content="Далее" Style="{StaticResource Buttons}"/>
+                
             </StackPanel>
 
         </StackPanel>

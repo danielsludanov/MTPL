@@ -1,0 +1,51 @@
+﻿<Page x:Class="MTPL.UserPages.bidcar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MTPL.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="bidcar">
+
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical" Width="750" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <Image Source="../References/AppIcons/Images/Logo.png" Width="80"/>
+                <Label Name="Header" Content="Оформление ОСАГО" VerticalAlignment="Center" Style="{StaticResource Labels}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="350" Height="470" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <Label Content="Марка автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox x:Name="BrandCar" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Категория автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
+                <ComboBox Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
+
+
+                <Label Content="Модель автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Год производства" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Регистрационный номер" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="СТС номер" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="ПТС номер" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Button Content="Далее" Style="{StaticResource Buttons}"/>
+
+
+
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

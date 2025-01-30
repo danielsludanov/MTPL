@@ -57,7 +57,8 @@ namespace MTPL.Authentication
 
                 MessageBox.Show("Вы авторизовались!");
 
-                ((App)Application.Current).CurrentUserID = userToCheck.role_id;
+                ((App)Application.Current).CurrentPositionID = userToCheck.role_id;
+                ((App)Application.Current).CurrentUserID = userToCheck.user_id;
 
 
                 if (userToCheck.role_id == 1)
