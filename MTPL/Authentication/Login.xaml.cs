@@ -56,11 +56,26 @@ namespace MTPL.Authentication
                 }
 
                 MessageBox.Show("Вы авторизовались!");
+
+                ((App)Application.Current).CurrentUserID = userToCheck.role_id;
+
+
+                if (userToCheck.role_id == 1)
+                {
+                    isNav = true;
+                    MainWindow main = new MainWindow();
+                    main.Show();
+                    this.Close();
+                }
                 
-                isNav = true;
-                MainWindow main = new MainWindow();
-                main.Show();
-                this.Close();
+                else
+                {
+                    isNav = true;
+                    EmployeeWindow employeeWindow = new EmployeeWindow();
+                    employeeWindow.Show();
+                    this.Close();
+                }
+                
             }
             catch (SqlException ex)
             {

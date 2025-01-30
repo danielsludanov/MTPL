@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="АвтоПолис - удобное оформление ОСАГО за пару минут" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
-        
+        <StackPanel Orientation="Vertical" Width="750" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Width="220" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <Image Source="References/AppIcons/Images/Logo.png" Width="80"/>
+                <Label Name="Header" Content="Полис ОСАГО" VerticalAlignment="Center" Style="{StaticResource Labels}"/>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource TextBlocks}" FontSize="16" Foreground="Black" Margin="0 0 0 30">
+                <Run Text="Узнайте стоимость за несколько минут, оформите полис онлайн"/>
+                <LineBreak/>
+                <Run Text="без осмотра автомобиля и получите кешбэк при оплате ИнгоКартой от"/>
+                <LineBreak/>
+                <Run Text="Ингосстрах банка"/>
+            </TextBlock>
+
+            <StackPanel Orientation="Horizontal" Width="315" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="bidClick" Content="Оформить онлайн" Margin="0 0 10 0" Style="{StaticResource Buttons}" Click="bidClick_Click"/>
+                <Button Content="Проверить статус ОСАГО" Style="{StaticResource Buttons}"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

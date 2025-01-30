@@ -43,4 +43,17 @@
         <Setter Property="FontWeight" Value="SemiBold"/>
     </Style>
 
+    <Style x:Key="ComboBoxes" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+
+    <Style x:Key="DatePickers" TargetType="DatePicker">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Focusable" Value="False"/>
+    </Style>
+
 </ResourceDictionary>

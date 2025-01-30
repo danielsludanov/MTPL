@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MTPL.UserPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace MTPL
         public MainWindow()
         {
             InitializeComponent();
+            FrameManager.MainFrame = MainFrame;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -42,6 +44,11 @@ namespace MTPL
             {
                 e.Cancel = true;
             }
+        }
+
+        private void bidClick_Click(object sender, RoutedEventArgs e)
+        {
+            FrameManager.MainFrame.Navigate(new bid());
         }
     }
 }

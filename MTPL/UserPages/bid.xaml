@@ -1,0 +1,56 @@
+﻿<Page x:Class="MTPL.UserPages.bid"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MTPL.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="bid">
+
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical" Width="750" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <Image Source="../References/AppIcons/Images/Logo.png" Width="80"/>
+                <Label Name="Header" Content="Оформление ОСАГО" VerticalAlignment="Center" Style="{StaticResource Labels}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Width="350" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <Label Content="ФИО" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox x:Name="FullName" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Дата рождения" Style="{StaticResource Labels}" FontSize="14"/>
+                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+
+                <Label Content="Регион проживания" Style="{StaticResource Labels}" FontSize="14"/>
+                <ComboBox Margin="0 0 0 10" Style="{StaticResource ComboBoxes}"/>
+
+                <Label Content="Серия водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Номер водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Срок окончания водительского удостоверения" Style="{StaticResource Labels}" FontSize="14"/>
+                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+
+                <Label Content="Серия паспорта" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Номер паспорта" Style="{StaticResource Labels}" FontSize="14"/>
+                <TextBox Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+
+                <Label Content="Срок окончания паспорта" Style="{StaticResource Labels}" FontSize="14"/>
+                <DatePicker Margin="0 0 0 10" Style="{StaticResource DatePickers}"/>
+
+                <Button Content="Оформить" Style="{StaticResource Buttons}"/>
+
+
+
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>
