@@ -22,7 +22,7 @@
 
             <StackPanel Orientation="Horizontal" Width="315" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="bidClick" Content="Оформить онлайн" Margin="0 0 10 0" Style="{StaticResource Buttons}" Click="bidClick_Click"/>
-                <Button Content="Проверить статус ОСАГО" Style="{StaticResource Buttons}"/>
+                <Button x:Name="BtnCheck" Content="Проверить статус ОСАГО" Style="{StaticResource Buttons}" Click="BtnCheck_Click"/>
             </StackPanel>
 
         </StackPanel>

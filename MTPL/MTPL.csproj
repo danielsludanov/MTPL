@@ -122,6 +122,9 @@
     <Compile Include="UserPages\InfoPolicy.xaml.cs">
       <DependentUpon>InfoPolicy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserPages\Insurance.xaml.cs">
+      <DependentUpon>Insurance.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserPages\Policies.xaml.cs">
       <DependentUpon>Policies.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserPages\InfoPolicy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\Insurance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

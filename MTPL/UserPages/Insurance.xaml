@@ -1,0 +1,62 @@
+﻿<Page x:Class="MTPL.UserPages.Insurance"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MTPL.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="Insurance">
+
+    <Grid Background="#9dcde7" Margin="20">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="СТРАХОВОЙ ПОЛИС ОСАГО" 
+               FontSize="24" 
+               FontWeight="Bold" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,20" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Серия и номер полиса:" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="PolicyNumber" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Дата начала действия:" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="IssueDate" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Дата окончания действия:" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="ExpirationDate" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBlocks}" />
+
+        <Label Content="Водитель:" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="DriverFullName" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Машина:" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="CarInfo" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Серия водительского удостоверения:" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="DrivingLicenseSeries" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Номер водительского удостоверения:" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="DrivingLicenseNumber" VerticalAlignment="Center" Grid.Row="7" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+
+        <Label Content="Стоимость полиса:" VerticalAlignment="Center" Grid.Row="8" Grid.Column="0" Style="{StaticResource Labels}"/>
+        <TextBlock x:Name="PolicyCost" VerticalAlignment="Center" Grid.Row="8" Grid.Column="1" Style="{StaticResource TextBlocks}"/>
+    </Grid>
+</Page>

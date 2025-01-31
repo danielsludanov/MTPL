@@ -141,7 +141,6 @@ namespace MTPL.UserPages
 
                 MessageBox.Show($"Заявка успешно отправлена! Стоимость полиса: {randomCost} рублей. Статус заявки можно проверить на главном экране.");
                 
-                // Переход на проверку статуса
             }
             catch(SqlException ex)
             {

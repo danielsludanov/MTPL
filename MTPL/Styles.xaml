@@ -33,7 +33,7 @@
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontFamily" Value="Semibold"/>
         <Setter Property="FontFamily" Value="Comic Sans MS"/>
-        <Setter Property="Foreground" Value="#9dcde7"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
 
     <Style x:Key="HyperLinks" TargetType="Hyperlink">
