@@ -50,7 +50,14 @@ namespace MTPL.UserPages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.MainFrame.Navigate(new InfoPolicy());
+            if(DataGridPolicies.SelectedItem is policy selectedPolicy)
+            {
+                FrameManager.MainFrame.Navigate(new InfoPolicy(selectedPolicy));
+            }
+            else
+            {
+                MessageBox.Show("Выберите полис для редактирования.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

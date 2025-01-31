@@ -19,8 +19,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер полиса" Width="*" Binding="{Binding policy_number}"/>
                 <DataGridTextColumn Header="Страховая компания" Width="*" Binding="{Binding insurance_company}"/>
-                <DataGridTextColumn Header="Дата подачи" Width="*" Binding="{Binding issue_date}"/>
-                <DataGridTextColumn Header="Дата окончания" Width="*" Binding="{Binding expiration_date}"/>
+                <DataGridTextColumn Header="Дата подачи" Width="*" Binding="{Binding issue_date, StringFormat=dd.MM.yyyy}"/>
+                <DataGridTextColumn Header="Дата окончания" Width="*" Binding="{Binding expiration_date, StringFormat=dd.MM.yyyy}"/>
                 <DataGridTextColumn Header="Водитель" Width="*" Binding="{Binding driver.FullName}"/>
                 <DataGridTextColumn Header="Автомобиль" Width="*" Binding="{Binding car.FullCarInfo}"/>
                 <DataGridTextColumn Header="Серия удостоверения" Width="*" Binding="{Binding driving_license_series}"/>
@@ -40,7 +40,7 @@
 
         </DataGrid>
 
-        <Button x:Name="BtnDelete" Grid.Row="0" Content="Удалить" HorizontalAlignment="Center" Width="100" Height="25" Style="{StaticResource Buttons}" Click="BtnDelete_Click"/>
+        <Button x:Name="BtnDelete" Grid.Row="0" Content="Удалить" Margin="0 0 5 0" HorizontalAlignment="Right" Width="100" Height="25" Style="{StaticResource Buttons}" Click="BtnDelete_Click"/>
 
     </Grid>
 </Page>

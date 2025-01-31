@@ -21,7 +21,7 @@
             <TextBox x:Name="PolicyNumber" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
 
             <Label Content="Страховая компания" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
-            <TextBox x:Name="InsuranceCompany" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+            <TextBox x:Name="InsuranceCompany" Style="{StaticResource TextBoxes}" IsEnabled="True" Margin="0 0 0 10"/>
 
             <Label Content="Дата действия" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
             <DatePicker x:Name="IssueDate" Style="{StaticResource DatePickers}" Margin="0 0 0 10"/>
@@ -44,7 +44,7 @@
             <Label Content="Конечная цена" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
             <TextBox x:Name="Cost" Style="{StaticResource TextBoxes}" Margin="0 0 0 10"/>
 
-            <Button x:Name="BtnSave" Style="{StaticResource Buttons}" Content="Сохранить"/>
+            <Button x:Name="BtnSave" Style="{StaticResource Buttons}" Content="Сохранить" Click="BtnSave_Click"/>
         </StackPanel>
         
 
