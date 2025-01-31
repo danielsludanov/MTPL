@@ -17,8 +17,8 @@ namespace MTPL
         public int policy_id { get; set; }
         public string policy_number { get; set; }
         public string insurance_company { get; set; }
-        public System.DateTime issue_date { get; set; }
-        public System.DateTime expiration_date { get; set; }
+        public Nullable<System.DateTime> issue_date { get; set; }
+        public Nullable<System.DateTime> expiration_date { get; set; }
         public int driver_id { get; set; }
         public int car_id { get; set; }
         public string driving_license_series { get; set; }

@@ -1,0 +1,46 @@
+﻿<Page x:Class="MTPL.UserPages.Policies"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MTPL.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="Policies">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="1" x:Name="DataGridPolicies" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер полиса" Width="*" Binding="{Binding policy_number}"/>
+                <DataGridTextColumn Header="Страховая компания" Width="*" Binding="{Binding insurance_company}"/>
+                <DataGridTextColumn Header="Дата подачи" Width="*" Binding="{Binding issue_date}"/>
+                <DataGridTextColumn Header="Дата окончания" Width="*" Binding="{Binding expiration_date}"/>
+                <DataGridTextColumn Header="Водитель" Width="*" Binding="{Binding driver.FullName}"/>
+                <DataGridTextColumn Header="Автомобиль" Width="*" Binding="{Binding car.FullCarInfo}"/>
+                <DataGridTextColumn Header="Серия удостоверения" Width="*" Binding="{Binding driving_license_series}"/>
+                <DataGridTextColumn Header="Номер удостоверения" Width="*" Binding="{Binding driving_license_number}"/>
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding cost}"/>
+
+                <DataGridTemplateColumn Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="BtnEdit" Content="Редактировать" ToolTip="Нажав на кнопку, Вы можете редактировать запись" Style="{StaticResource Buttons}" Width="100" FontSize="12" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+
+        <Button x:Name="BtnDelete" Grid.Row="0" Content="Удалить" HorizontalAlignment="Center" Width="100" Height="25" Style="{StaticResource Buttons}" Click="BtnDelete_Click"/>
+
+    </Grid>
+</Page>

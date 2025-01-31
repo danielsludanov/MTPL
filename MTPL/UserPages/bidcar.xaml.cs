@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -116,7 +117,29 @@ namespace MTPL.UserPages
                 db.cars.Add(newCar);
                 db.SaveChanges();
 
-                MessageBox.Show("Заявка успешно отправлена! Статус заявки вы можете увидеть на главном экране (проверить статус");
+                var addedCar = db.cars.OrderByDescending(c => c.car_id).FirstOrDefault(c => c.driver_id == driver.driver_id);
+                if (addedCar == null)
+                {
+                    MessageBox.Show("Ошибка: автомобиль не найден после добавления!");
+                    return;
+                }
+
+                Random random = new Random();
+                decimal randomCost = random.Next(2000, 5001);
+
+                var newPolicy = new policy
+                {
+                    policy_number = GeneratePolicyNumber(),
+                    driver_id = driver.driver_id,
+                    car_id = addedCar.car_id,
+                    driving_license_series = driver.driving_license_series,
+                    driving_license_number = driver.driving_license_number,
+                    cost = randomCost
+                };
+                db.policies.Add(newPolicy);
+                db.SaveChanges();
+
+                MessageBox.Show($"Заявка успешно отправлена! Стоимость полиса: {randomCost} рублей. Статус заявки можно проверить на главном экране.");
                 
                 // Переход на проверку статуса
             }
@@ -124,6 +147,10 @@ namespace MTPL.UserPages
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private string GeneratePolicyNumber()
+        {
+            return $"PL-{DateTime.Now:yyyyMMddHHmmss}-{new Random().Next(1000, 9999)}";
         }
     }
 }

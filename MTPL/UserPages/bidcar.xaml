@@ -25,19 +25,19 @@
 
 
                 <Label Content="Модель автомобиля" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox x:Name="ModelCar" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="ModelCar" Margin="0 0 0 10" Style="{StaticResource TextBoxes}" MaxLength="30"/>
 
                 <Label Content="Год производства" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox x:Name="YearManifacture" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="YearManifacture" Margin="0 0 0 10" Style="{StaticResource TextBoxes}" MaxLength="4"/>
 
                 <Label Content="Регистрационный номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox x:Name="RegNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="RegNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}" MaxLength="9"/>
 
                 <Label Content="СТС номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox x:Name="STSNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="STSNumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}" MaxLength="10"/>
 
                 <Label Content="ПТС номер" Style="{StaticResource Labels}" FontSize="14"/>
-                <TextBox x:Name="PTSnumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}"/>
+                <TextBox x:Name="PTSnumber" Margin="0 0 0 10" Style="{StaticResource TextBoxes}" MaxLength="10"/>
 
                 <Button x:Name="BtnDone" Content="Оформить" Click="BtnDone_Click" Style="{StaticResource Buttons}"/>
 

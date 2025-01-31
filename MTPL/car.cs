@@ -35,5 +35,7 @@ namespace MTPL
         public virtual driver driver { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<policy> policies { get; set; }
+
+        public string FullCarInfo => $"{car_brands.brand_name} {model}";
     }
 }

@@ -1,0 +1,52 @@
+﻿<Page x:Class="MTPL.UserPages.InfoPolicy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MTPL.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="InfoPolicy">
+
+    <Grid Background="White">
+
+        <StackPanel Orientation="Vertical" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Width="270" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 10">
+                <Image Source="../References/AppIcons/Images/Logo.png" Width="80"/>
+                <Label Content="Оформление полиса" Style="{StaticResource Labels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </StackPanel>
+
+            <Label Content="Номер полиса" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="PolicyNumber" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Страховая компания" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="InsuranceCompany" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Дата действия" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <DatePicker x:Name="IssueDate" Style="{StaticResource DatePickers}" Margin="0 0 0 10"/>
+
+            <Label Content="Дата окончания" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <DatePicker x:Name="ExpirationDate" Style="{StaticResource DatePickers}" Margin="0 0 0 10"/>
+
+            <Label Content="ФИО водителя" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="FIODriver" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Автомобиль водителя" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="CarDriver" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Серия водительского удостоверения" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="DrivingLicenseSerial" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Номер водительского удостоверения" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="DrivingLicenseNumber" Style="{StaticResource TextBoxes}" IsEnabled="False" Margin="0 0 0 10"/>
+
+            <Label Content="Конечная цена" Style="{StaticResource Labels}" Margin="0 0 0 5"/>
+            <TextBox x:Name="Cost" Style="{StaticResource TextBoxes}" Margin="0 0 0 10"/>
+
+            <Button x:Name="BtnSave" Style="{StaticResource Buttons}" Content="Сохранить"/>
+        </StackPanel>
+        
+
+    </Grid>
+</Page>

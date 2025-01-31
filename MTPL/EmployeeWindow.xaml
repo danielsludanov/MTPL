@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MTPL"
         mc:Ignorable="d"
-        Title="EmployeeWindow" Height="450" Width="800">
+        Title="АвтоПолис - удобное оформление ОСАГО за пару минут" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
-        
+        <StackPanel Orientation="Vertical" Width="750" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <Image Source="References/AppIcons/Images/Logo.png" Width="80"/>
+                <Label Name="Header" Content="Панель страхового агента" VerticalAlignment="Center" Style="{StaticResource Labels}"/>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource TextBlocks}" FontSize="16" Foreground="Black" Margin="0 0 0 30">
+        <Run Text="Узнайте стоимость за несколько минут, оформите полис онлайн"/>
+        <LineBreak/>
+        <Run Text="без осмотра автомобиля и получите кешбэк при оплате ИнгоКартой от"/>
+        <LineBreak/>
+        <Run Text="Ингосстрах банка"/>
+            </TextBlock>
+            <Button x:Name="bidClick" Content="Панель управления" Width="200" Margin="0 0 10 0" Style="{StaticResource Buttons}" Click="bidClick_Click"/>
+
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

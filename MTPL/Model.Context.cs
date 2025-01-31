@@ -23,7 +23,7 @@ namespace MTPL
 
         public static MTPLEntities GetContext()
         {
-            if (_context == null)
+            if ( _context == null )
             {
                 _context = new MTPLEntities();
             }
