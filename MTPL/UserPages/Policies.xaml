@@ -40,6 +40,9 @@
 
         </DataGrid>
 
+        <TextBox x:Name="TxtSearch" Width="200" Height="25" Margin="5" VerticalAlignment="Center" 
+         HorizontalAlignment="Center"  TextChanged="TxtSearch_TextChanged"/>
+
         <Button x:Name="BtnDelete" Grid.Row="0" Content="Удалить" Margin="0 0 5 0" HorizontalAlignment="Right" Width="100" Height="25" Style="{StaticResource Buttons}" Click="BtnDelete_Click"/>
 
     </Grid>

@@ -46,5 +46,28 @@ namespace MTPL.UserPages
                 MessageBox.Show("Выберите полис для редактирования.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+        private void LoadData(string searchQuery = "")
+        {
+            var policies = db.policies.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                policies = policies.Where(p =>
+                    p.driver.last_name.Contains(searchQuery) ||
+                    p.driver.first_name.Contains(searchQuery) ||
+                    p.driver.second_name.Contains(searchQuery) ||
+                    (p.driver.last_name + " " + p.driver.first_name + " " + p.driver.second_name).Contains(searchQuery)
+                );
+            }
+
+            DataGridPolicies.ItemsSource = policies.ToList();
+        }
+
+
+        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadData(TxtSearch.Text);
+        }
     }
 }
